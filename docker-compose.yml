@@ -4,8 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "9998:9998"
+    environment:
+      - HTTP_PORT=9998
     volumes:
       - ".:/var/www/html"
     network_mode: host
